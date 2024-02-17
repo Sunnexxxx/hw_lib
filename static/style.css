@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: darkgray;
+}
+
+h1 {
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.authors, .books {
+    width: 48%;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    margin: auto;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+
+.author, .book {
+    width: 30vw;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 8px;
+    gap: 280px;
+    align-items: center;
+    padding: 10px;
+    background-color: bisque;
+    display: flex;
+    height: 10vh;
+}
+
+.ab{
+    margin-left: 800px;
+}
+
+
+.delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 40vw;
+    height: 20vh;
+}
+
+.delete_btn{
+    margin-top: 10px;
+    padding: 5px 7px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete_btn:hover{
+    background-color: #45a049;
+}
+
+.create{
+    width: 50vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 8px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.create_btn{
+    margin-top: 10px;
+    padding: 5px 7px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 110px;
+}
+
+.create_btn:hover{
+    background-color: #45a049;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    height: 50vh;
+    align-items: center;
+    margin: 8vh auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    gap: 8px;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+
+
+

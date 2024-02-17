@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <h1 class="ab">Авторы и Книги</h1>
+
+    <div class="container">
+        <div class="authors">
+            <h2>Авторы</h2>
+            {% for author in authors %}
+                <div class="author">
+                    <p>{{ author.first_name }} {{ author.last_name }}</p>
+                    <div class="extra">
+                    <p><a href="{% url 'author_detail' pk=author.pk %}">Просмотреть</a></p>
+                    <p><a href="{% url 'author_update' pk=author.pk %}">Редактировать</a></p>
+                    <p><a href="{% url 'author_delete' pk=author.pk %}">Удалить</a></p>
+                    </div>
+                </div>
+            {% endfor %}
+            <a href="{% url 'author_create' %}">Добавить нового автора</a>
+        </div>
+
+        <div class="books">
+            <h2>Книги</h2>
+            {% for book in books %}
+                <div class="book">
+                    <p>{{ book.title }} - {{ book.author.last_name }}</p>
+                    <div class="extra">
+                    <p><a href="{% url 'book_detail' pk=book.pk %}">Просмотреть</a></p>
+                    <p><a href="{% url 'book_update' pk=book.pk %}">Редактировать</a></p>
+                    <p><a href="{% url 'book_delete' pk=book.pk %}">Удалить</a></p>
+                    </div>
+                </div>
+            {% endfor %}
+            <a href="{% url 'book_create' %}">Добавить новую книгу</a>
+        </div>
+    </div>
+
+</body>
+</html>
+

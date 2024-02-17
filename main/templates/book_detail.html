@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="detail">
+    <h1>Детали книги</h1>
+    <p>Название: {{ book.title }}</p>
+    <p>Автор: {{ book.author.first_name }} {{ book.author.last_name }}</p>
+    <p>Год издания: {{ book.publication_year }}</p>
+    <p>Жанры:
+        {% for genre in book.genres.all %}
+            {{ genre.name }}{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </p>
+    <p>Рейтинг: {{ book.rating }}</p>
+    <a href="javascript:void(0);" onclick="goBack()">Back</a>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </div>
+{% endblock %}
